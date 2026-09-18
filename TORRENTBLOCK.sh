@@ -465,8 +465,9 @@ download_blocklists() {
     download_blocklist "http://list.iblocklist.com/?list=togdoptykrlolpddwbvz&fileformat=p2p&archiveformat=gz" "blocklist_tor.gz"
     
     # Bogon IPs - Invalid IP ranges that shouldn't be in use
-    echo "7. Bogon IPs - Invalid IP ranges that shouldn’t be in use"
-    download_blocklist "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=gz" "blocklist_bogon.gz"
+    # Incorrect
+    #echo "7. Bogon IPs - Invalid IP ranges that shouldn’t be in use"
+    #download_blocklist "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=gz" "blocklist_bogon.gz"
     
     # Microsoft Blocklist - Microsoft identified threats
     echo "8. Microsoft - Microsoft identified threats"
@@ -486,7 +487,7 @@ download_blocklists() {
     
     # Naunter's BT_Blocklists - Community curated list
     echo "13. Naunter - Community curated blocklist"
-    download_blocklist "https://raw.githubusercontent.com/Naunter/BT_Blocklists/master/ipfilter.dat" "blocklist_naunter.dat"
+    download_blocklist "https://github.com/Naunter/BT_BlockLists/releases/download/v.1/bt_blocklists.gz" "blocklist_naunter.gz"
     
     # eMule Security IPFilter - P2P specific threats
     echo "14. eMule - P2P specific threats"
@@ -529,8 +530,8 @@ download_blocklists() {
     # Additional Security Lists
     echo "27. BadZulo - Known bad actors"
     download_blocklist "http://list.iblocklist.com/?list=uwnukjqktoggdknzrhgh&fileformat=p2p&archiveformat=gz" "blocklist_badzulo.gz"
-    echo "28. AbuseIPDB - Community reported IPs"
-    download_blocklist "https://api.abuseipdb.com/api/v2/blacklist" "blocklist_abuseipdb.txt"
+    #echo "28. AbuseIPDB - Community reported IPs"
+    #download_blocklist "https://api.abuseipdb.com/api/v2/blacklist" "blocklist_abuseipdb.txt"
     echo "29. Emerging Threats - Active threats"
     download_blocklist "http://rules.emergingthreats.net/blockrules/compromised-ips.txt" "blocklist_et.txt"
     
@@ -549,14 +550,11 @@ download_blocklists() {
     # Malware Specific
     echo "34. Feodo Tracker - Banking trojan IPs"
     download_blocklist "https://feodotracker.abuse.ch/downloads/ipblocklist.txt" "blocklist_feodo.txt"
-    echo "35. SSL Blacklist - Malicious SSL certificates"
-    download_blocklist "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt" "blocklist_sslbl.txt"
-    echo "36. Ransomware Tracker - Ransomware IPs"
-    download_blocklist "https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt" "blocklist_ransomware.txt"
+    # Error 503 certificate has expired
+   #echo "36. Ransomware Tracker - Ransomware IPs"
+    #download_blocklist "https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt" "blocklist_ransomware.txt"
     
     # Additional P2P Lists
-    echo "37. I2P Nodes - I2P network nodes"
-    download_blocklist "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/i2p-nodes.txt" "blocklist_i2p.txt"
     echo "38. Abuse.ch - Malicious torrent sources"
     download_blocklist "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt" "blocklist_abuse.txt"
     echo "39. URLhaus - Malicious URLs"
