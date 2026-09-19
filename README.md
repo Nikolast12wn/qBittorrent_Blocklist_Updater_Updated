@@ -18,7 +18,7 @@ License: GPL-2.0
     - Finds correct configuration directory
 
  2. Blocklist Management:
-    - Downloads 40+ specialized blocklists
+    - Downloads 32 specialized blocklists
     - Handles various file formats (gz, zip, dat, txt)
     - Converts CIDR notation to IP ranges
     - Removes duplicate entries
