@@ -14,7 +14,7 @@
 #
 # Features:
 # - Automatic detection of qBittorrent installation (apt, rpm, flatpak)
-# - Downloads and processes 40+ blocklists
+# - Downloads and processes 32+ blocklists
 # - Removes duplicate entries while preserving unique IPs
 # - Supports multiple formats (P2P, CIDR, individual IPs)
 # - Caches downloads to prevent unnecessary updates
@@ -470,19 +470,19 @@ download_blocklists() {
     #download_blocklist "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=gz" "blocklist_bogon.gz"
     
     # Microsoft Blocklist - Microsoft identified threats
-    echo "8. Microsoft - Microsoft identified threats"
+    echo "7. Microsoft - Microsoft identified threats"
     download_blocklist "http://list.iblocklist.com/?list=xshktygkujudfnjfioro&fileformat=p2p&archiveformat=gz" "blocklist_microsoft.gz"
     
     # Spider Blocklist - Aggressive web crawlers
-    echo "9. Spider - Aggressive web crawlers"
+    echo "8. Spider - Aggressive web crawlers"
     download_blocklist "http://list.iblocklist.com/?list=mcvxsnihddgutbjfbghy&fileformat=p2p&archiveformat=gz" "blocklist_spider.gz"
     
     # iBlocklist Levels - Comprehensive threat lists
-    echo "10. iBlocklist Level 1 - Basic protection"
+    echo "9. iBlocklist Level 1 - Basic protection"
     download_blocklist "http://list.iblocklist.com/?list=bt_level1&fileformat=p2p&archiveformat=gz" "blocklist_iblock_level1.gz"
-    echo "11. iBlocklist Level 2 - Intermediate protection"
+    echo "10. iBlocklist Level 2 - Intermediate protection"
     download_blocklist "http://list.iblocklist.com/?list=bt_level2&fileformat=p2p&archiveformat=gz" "blocklist_iblock_level2.gz"
-    echo "12. iBlocklist Level 3 - Advanced protection"
+    echo "11. iBlocklist Level 3 - Advanced protection"
     download_blocklist "http://list.iblocklist.com/?list=bt_level3&fileformat=p2p&archiveformat=gz" "blocklist_iblock_level3.gz"
     
     # Naunter's BT_Blocklists - Community curated list - Incorrect
@@ -490,7 +490,7 @@ download_blocklists() {
     #download_blocklist "https://github.com/Naunter/BT_BlockLists/releases/download/v.1/bt_blocklists.gz" "blocklist_naunter.gz"
     
     # eMule Security IPFilter - P2P specific threats
-    echo "14. eMule - P2P specific threats"
+    echo "12. eMule - P2P specific threats"
     download_blocklist "https://upd.emule-security.org/ipfilter.zip" "blocklist_emule.zip"
     
     # BiglyBT Level1 - BitTorrent specific threats - 404 Not Found
@@ -498,68 +498,68 @@ download_blocklists() {
     #download_blocklist "https://www.biglybt.com/blocklist/level1.gz" "blocklist_biglybt.gz"
     
     # FireHOL - IP lists for all threats
-    echo "16. FireHOL - Comprehensive IP threat intelligence"
+    echo "13. FireHOL - Comprehensive IP threat intelligence"
     download_blocklist "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset" "blocklist_firehol.netset"
     
     # IPDeny Geographic Blocks
-    echo "17. IPDeny US - US IP ranges"
+    echo "14. IPDeny US - US IP ranges"
     download_blocklist "http://www.ipdeny.com/ipblocks/data/countries/us.zone" "blocklist_ipdeny_us.zone"
-    echo "18. IPDeny CN - China IP ranges"
+    echo "15. IPDeny CN - China IP ranges"
     download_blocklist "http://www.ipdeny.com/ipblocks/data/countries/cn.zone" "blocklist_ipdeny_cn.zone"
     
     # Various Security Lists
-    echo "19. MalwareDomainList - Known malware hosts"
+    echo "16. MalwareDomainList - Known malware hosts"
     download_blocklist "http://www.malwaredomainlist.com/hostslist/ip.txt" "blocklist_malwaredomainlist.txt"
-    echo "20. Team Cymru Bogons - Invalid IP ranges"
+    echo "17. Team Cymru Bogons - Invalid IP ranges"
     download_blocklist "http://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt" "blocklist_bogons.txt"
-    echo "21. CINS Army - Active threat intelligence"
+    echo "18. CINS Army - Active threat intelligence"
     download_blocklist "https://cinsscore.com/list/ci-badguys.txt" "blocklist_cins_army.txt"
-    echo "22. DShield List - Attack source IPs"
+    echo "19. DShield List - Attack source IPs"
     download_blocklist "https://isc.sans.edu/feeds/block.txt" "blocklist_dshield.txt"
     
     # BitTorrent Specific Lists
-    echo "23. Bitsurge - BitTorrent specific threats"
+    echo "20. Bitsurge - BitTorrent specific threats"
     download_blocklist "https://github.com/Naunter/BT_BlockLists/raw/master/bt_blocklists.gz" "blocklist_bitsurge.gz"
-    echo "24. BlocklistProject - Torrent trackers"
+    echo "21. BlocklistProject - Torrent trackers"
     download_blocklist "https://blocklistproject.github.io/Lists/torrent.txt" "blocklist_blocklistproject_torrent.txt"
     #echo "25. Ultimate Blocklist - Comprehensive P2P protection" - Does not exist
     #download_blocklist "https://github.com/walshie4/Ultimate-Blocklist/archive/main.zip" "blocklist_ultimate.zip"
-    echo "26. Transmission - Transmission client blocklist"
+    echo "22. Transmission - Transmission client blocklist"
     download_blocklist "https://github.com/ttgapers/transmission-blocklist/releases/latest/download/blocklist.gz" "blocklist_transmission.gz"
     
     # Additional Security Lists
-    echo "27. BadZulo - Known bad actors"
+    echo "23. BadZulo - Known bad actors"
     download_blocklist "http://list.iblocklist.com/?list=uwnukjqktoggdknzrhgh&fileformat=p2p&archiveformat=gz" "blocklist_badzulo.gz"
     #echo "28. AbuseIPDB - Community reported IPs"
     #download_blocklist "https://api.abuseipdb.com/api/v2/blacklist" "blocklist_abuseipdb.txt"
-    echo "29. Emerging Threats - Active threats"
+    echo "24. Emerging Threats - Active threats"
     download_blocklist "http://rules.emergingthreats.net/blockrules/compromised-ips.txt" "blocklist_et.txt"
     
     # Spamhaus Lists
-    echo "30. Spamhaus DROP - Known spammers"
+    echo "25. Spamhaus DROP - Known spammers"
     download_blocklist "https://www.spamhaus.org/drop/drop.txt" "blocklist_spamhaus_drop.txt"
-    echo "31. Spamhaus EDROP - Extended DROP list"
+    echo "26. Spamhaus EDROP - Extended DROP list"
     download_blocklist "https://www.spamhaus.org/drop/edrop.txt" "blocklist_spamhaus_edrop.txt"
     
     # Threat Intelligence
-    echo "32. Talos - Cisco Talos intelligence"
+    echo "27. Talos - Cisco Talos intelligence"
     download_blocklist "https://www.talosintelligence.com/documents/ip-blacklist" "blocklist_talos.txt"
-    echo "33. AlienVault - Open threat intelligence"
+    echo "28. AlienVault - Open threat intelligence"
     download_blocklist "https://reputation.alienvault.com/reputation.data" "blocklist_alienvault.txt"
     
     # Malware Specific
-    echo "34. Feodo Tracker - Banking trojan IPs"
+    echo "29. Feodo Tracker - Banking trojan IPs"
     download_blocklist "https://feodotracker.abuse.ch/downloads/ipblocklist.txt" "blocklist_feodo.txt"
     # Error 503 certificate has expired
    #echo "36. Ransomware Tracker - Ransomware IPs"
     #download_blocklist "https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt" "blocklist_ransomware.txt"
     
     # Additional P2P Lists
-    echo "38. Abuse.ch - Malicious torrent sources"
+    echo "30. Abuse.ch - Malicious torrent sources"
     download_blocklist "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt" "blocklist_abuse.txt"
-    echo "39. URLhaus - Malicious URLs"
+    echo "31. URLhaus - Malicious URLs"
     download_blocklist "https://urlhaus.abuse.ch/downloads/hostfile/" "blocklist_urlhaus.txt"
-    echo "40. Dan Pollock's List - Additional threats"
+    echo "32. Dan Pollock's List - Additional threats"
     download_blocklist "https://someonewhocares.org/hosts/hosts" "blocklist_pollock.txt"
 }
 
@@ -579,7 +579,7 @@ echo
 echo "Starting IP filter update process:"
 echo "- Cache directory: $CACHE_DIR"
 echo "- Output directory: $BLOCKLIST_DIR"
-echo "- Number of blocklist sources: 34"
+echo "- Number of blocklist sources: 32"
 echo
 
 # Download and process blocklists
