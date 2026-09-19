@@ -485,17 +485,17 @@ download_blocklists() {
     echo "12. iBlocklist Level 3 - Advanced protection"
     download_blocklist "http://list.iblocklist.com/?list=bt_level3&fileformat=p2p&archiveformat=gz" "blocklist_iblock_level3.gz"
     
-    # Naunter's BT_Blocklists - Community curated list
-    echo "13. Naunter - Community curated blocklist"
-    download_blocklist "https://github.com/Naunter/BT_BlockLists/releases/download/v.1/bt_blocklists.gz" "blocklist_naunter.gz"
+    # Naunter's BT_Blocklists - Community curated list - Incorrect
+    #echo "13. Naunter - Community curated blocklist"
+    #download_blocklist "https://github.com/Naunter/BT_BlockLists/releases/download/v.1/bt_blocklists.gz" "blocklist_naunter.gz"
     
     # eMule Security IPFilter - P2P specific threats
     echo "14. eMule - P2P specific threats"
     download_blocklist "https://upd.emule-security.org/ipfilter.zip" "blocklist_emule.zip"
     
-    # BiglyBT Level1 - BitTorrent specific threats
-    echo "15. BiglyBT - BitTorrent specific threats"
-    download_blocklist "https://www.biglybt.com/blocklist/level1.gz" "blocklist_biglybt.gz"
+    # BiglyBT Level1 - BitTorrent specific threats - 404 Not Found
+    #echo "15. BiglyBT - BitTorrent specific threats"
+    #download_blocklist "https://www.biglybt.com/blocklist/level1.gz" "blocklist_biglybt.gz"
     
     # FireHOL - IP lists for all threats
     echo "16. FireHOL - Comprehensive IP threat intelligence"
@@ -522,8 +522,8 @@ download_blocklists() {
     download_blocklist "https://github.com/Naunter/BT_BlockLists/raw/master/bt_blocklists.gz" "blocklist_bitsurge.gz"
     echo "24. BlocklistProject - Torrent trackers"
     download_blocklist "https://blocklistproject.github.io/Lists/torrent.txt" "blocklist_blocklistproject_torrent.txt"
-    echo "25. Ultimate Blocklist - Comprehensive P2P protection"
-    download_blocklist "https://github.com/walshie4/Ultimate-Blocklist/archive/main.zip" "blocklist_ultimate.zip"
+    #echo "25. Ultimate Blocklist - Comprehensive P2P protection" - Does not exist
+    #download_blocklist "https://github.com/walshie4/Ultimate-Blocklist/archive/main.zip" "blocklist_ultimate.zip"
     echo "26. Transmission - Transmission client blocklist"
     download_blocklist "https://github.com/ttgapers/transmission-blocklist/releases/latest/download/blocklist.gz" "blocklist_transmission.gz"
     
@@ -579,7 +579,7 @@ echo
 echo "Starting IP filter update process:"
 echo "- Cache directory: $CACHE_DIR"
 echo "- Output directory: $BLOCKLIST_DIR"
-echo "- Number of blocklist sources: 40+"
+echo "- Number of blocklist sources: 34"
 echo
 
 # Download and process blocklists
